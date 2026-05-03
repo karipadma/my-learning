@@ -1,200 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CloudOps Engine — AWS DevOps Platform</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS DevOps Course</title>
 
-<style>
-:root{
-  --bg:#050816;
-  --card:rgba(255,255,255,.05);
-  --text:#eaf2ff;
-  --muted:#94a3b8;
-  --brand:#ff9900;
-  --accent:#38bdf8;
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-body{
-  margin:0;
-  font-family:system-ui;
-  color:var(--text);
-  background: radial-gradient(circle at 20% 20%, #0ea5e933, transparent),
-              radial-gradient(circle at 80% 80%, #ff990033, transparent),
-              var(--bg);
-}
+  <style>
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:#0b1220;
+      color:white;
+    }
 
-/* NAV */
-.nav{
-  position:sticky;
-  top:0;
-  backdrop-filter:blur(10px);
-  display:flex;
-  justify-content:space-between;
-  padding:16px 40px;
-  background:rgba(0,0,0,.4);
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
+    header{
+      padding:80px 20px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 20% 20%, #ff990033, transparent),
+        radial-gradient(circle at 80% 80%, #38bdf833, transparent),
+        #0b1220;
+    }
 
-.logo{
-  font-weight:bold;
-  letter-spacing:.5px;
-}
+    header h1{
+      font-size:48px;
+      margin:0;
+    }
 
-.btn{
-  padding:10px 16px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.2);
-  cursor:pointer;
-  transition:.3s;
-}
+    .highlight{
+      background:linear-gradient(90deg,#ff9900,#38bdf8);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
 
-.btn:hover{
-  background:var(--accent);
-  color:black;
-}
+    header p{
+      color:#94a3b8;
+      margin-top:10px;
+    }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:80px 20px;
-}
+    .btn{
+      margin-top:20px;
+      padding:12px 25px;
+      border-radius:30px;
+      background:linear-gradient(135deg,#ff9900,#ffb84d);
+      border:none;
+      font-weight:bold;
+      cursor:pointer;
+    }
 
-.hero h1{
-  font-size:48px;
-  margin-bottom:10px;
-}
+    .section{
+      padding:60px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
 
-.hero span{
-  color:var(--brand);
-}
+    h2{
+      text-align:center;
+      margin-bottom:30px;
+      font-size:28px;
+    }
 
-.hero p{
-  color:var(--muted);
-}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
 
-/* PIPELINE ANIMATION */
-.pipeline{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-top:50px;
-}
+    .card{
+      padding:20px;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      transition:.3s;
+    }
 
-.stage{
-  padding:16px;
-  border-radius:12px;
-  background:var(--card);
-  border:1px solid rgba(255,255,255,.1);
-  animation:float 4s infinite ease-in-out;
-}
+    .card:hover{
+      transform:translateY(-6px);
+    }
 
-.stage:nth-child(2){animation-delay:1s}
-.stage:nth-child(3){animation-delay:2s}
-.stage:nth-child(4){animation-delay:3s}
+    .card h3{
+      color:#ff9900;
+      margin-bottom:10px;
+    }
 
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-}
+    .card p{
+      color:#94a3b8;
+      font-size:14px;
+    }
 
-/* CARDS */
-.section{
-  padding:60px 20px;
-  max-width:1000px;
-  margin:auto;
-}
+    .box{
+      text-align:center;
+      padding:25px;
+      border-radius:16px;
+      background:#1e293b;
+    }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+    .contact{
+      text-align:center;
+      padding:25px;
+      border-radius:16px;
+      background:linear-gradient(135deg,#ff9900,#ffb84d);
+      color:black;
+      font-weight:500;
+    }
 
-.card{
-  padding:20px;
-  border-radius:16px;
-  background:var(--card);
-  border:1px solid rgba(255,255,255,.1);
-  transition:.3s;
-}
-
-.card:hover{
-  transform:scale(1.05);
-  border-color:var(--accent);
-}
-
-/* ARCH BOX */
-.arch{
-  margin-top:40px;
-  padding:20px;
-  border-radius:16px;
-  background:linear-gradient(135deg,#0ea5e922,#ff990022);
-  border:1px solid rgba(255,255,255,.2);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  color:var(--muted);
-}
-</style>
+    footer{
+      text-align:center;
+      padding:20px;
+      color:#64748b;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="nav">
-  <div class="logo">⚡ CloudOps Engine</div>
-  <div>
-    <button class="btn">Docs</button>
-    <button class="btn">Deploy</button>
-  </div>
-</div>
+<header>
+  <h1>Master <span class="highlight">AWS DevOps</span></h1>
+  <p>Build real-world cloud projects and become job-ready</p>
+  <button class="btn">Enroll Now</button>
+</header>
 
-<section class="hero">
-  <h1>Build Faster on <span>AWS</span></h1>
-  <p>A modern DevOps platform for scalable, secure cloud applications.</p>
+<section class="section">
+  <h2>Course Syllabus</h2>
 
-  <div class="pipeline">
-    <div class="stage">Code</div>
-    <div class="stage">Build</div>
-    <div class="stage">Deploy</div>
-    <div class="stage">Monitor</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Module 1</h3>
+      <p>AWS Basics, IAM, EC2, S3</p>
+    </div>
+
+    <div class="card">
+      <h3>Module 2</h3>
+      <p>VPC, Load Balancer, Auto Scaling</p>
+    </div>
+
+    <div class="card">
+      <h3>Module 3</h3>
+      <p>Docker, ECS, Kubernetes</p>
+    </div>
+
+    <div class="card">
+      <h3>Module 4</h3>
+      <p>CI/CD with GitHub Actions</p>
+    </div>
+
+    <div class="card">
+      <h3>Module 5</h3>
+      <p>Monitoring with CloudWatch</p>
+    </div>
+
+    <div class="card">
+      <h3>Module 6</h3>
+      <p>Real-Time Project Deployment</p>
+    </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Core Capabilities</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Infrastructure</h3>
-      <p>Provision scalable environments using Terraform & AWS.</p>
-    </div>
-    <div class="card">
-      <h3>CI/CD</h3>
-      <p>Automated pipelines with GitHub Actions & CodePipeline.</p>
-    </div>
-    <div class="card">
-      <h3>Monitoring</h3>
-      <p>CloudWatch, Prometheus & real-time alerts.</p>
-    </div>
+  <h2>Timings</h2>
+  <div class="box">
+    <p>Weekdays: 7 PM – 9 PM</p>
+    <p>Weekends: 10 AM – 2 PM</p>
+    <p>Duration: 6 Weeks</p>
   </div>
 </section>
 
 <section class="section">
-  <h2>Architecture Preview</h2>
-  <div class="arch">
-    <p>
-      Users → CloudFront → ALB → ECS (Microservices) → RDS / DynamoDB  
-      <br><br>
-      Secure, scalable, and production-ready cloud architecture.
-    </p>
+  <h2>Benefits</h2>
+  <div class="grid">
+    <div class="card">Real-time projects</div>
+    <div class="card">Resume building</div>
+    <div class="card">Interview preparation</div>
+    <div class="card">Placement support</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Contact</h2>
+  <div class="contact">
+    <p>Phone: +91-9876543210</p>
+    <p>Email: training@cloudops.com</p>
+    <p>Location: Online / Hyderabad</p>
   </div>
 </section>
 
 <footer>
-  © 2026 CloudOps Engine • Built on AWS DevOps principles
+  © 2026 AWS DevOps Training
 </footer>
 
 </body>
