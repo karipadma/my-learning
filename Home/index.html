@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Cloud DevOps Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#e6e6fa,#d8b4fe);
+  color:#4c1d95;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+header h1{
+  font-size:48px;
+  margin:0;
+}
+
+header span{
+  color:#9333ea;
+}
+
+header p{
+  margin-top:10px;
+  font-size:18px;
+  color:#6b21a8;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px 80px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+/* CARD (PINK) */
+.card{
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  background:linear-gradient(135deg,#ffe4ec,#fbcfe8);
+  border:1px solid rgba(255,255,255,.6);
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+/* CLOUD ACCENTS */
+.aws{border-top:6px solid #ff9900;}
+.azure{border-top:6px solid #0078D4;}
+.gcp{border-top:6px solid #34A853;}
+
+.icon{
+  font-size:40px;
+}
+
+/* TEXT */
+.card h2{
+  margin:15px 0;
+  color:#831843;
+}
+
+.card p{
+  color:#9d174d;
+  font-size:14px;
+}
+
+/* BUTTON */
+.card a{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  color:white;
+  transition:.3s;
+}
+
+/* BUTTON COLORS */
+.aws a{background:#ff9900;}
+.azure a{background:#0078D4;}
+.gcp a{background:#34A853;}
+
+.card a:hover{
+  transform:scale(1.05);
+  opacity:.9;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#6b21a8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>💜 Multi-Cloud <span>DevOps Hub</span></h1>
+  <p>Select a platform to test ALB path-based routing</p>
+</header>
+
+<div class="container">
+
+  <!-- AWS -->
+  <div class="card aws">
+    <div class="icon">☁</div>
+    <h2>AWS</h2>
+    <p>Scalable infrastructure with real-time DevOps projects.</p>
+    <a href="http://ALB-739091676.us-east-1.elb.amazonaws.com/aws/">Go to AWS</a>
+  </div>
+
+  <!-- Azure -->
+  <div class="card azure">
+    <div class="icon">◆</div>
+    <h2>Azure</h2>
+    <p>Enterprise cloud powered by Microsoft ecosystem.</p>
+    <a href="http://ALB-739091676.us-east-1.elb.amazonaws.com/azure/">Go to Azure</a>
+  </div>
+
+  <!-- GCP -->
+  <div class="card gcp">
+    <div class="icon">⬤</div>
+    <h2>GCP</h2>
+    <p>Modern cloud for AI, Kubernetes, and big data.</p>
+    <a href="http://multicloud-lb-1376115289.us-east-1.elb.amazonaws.com/gcp/">Go to GCP</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Multi-Cloud DevOps Lab | Lavender + Pink Theme 🌸
+</footer>
+
+</body>
+</html>
