@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CloudOps Engine — AWS DevOps Platform</title>
+
+<style>
+:root{
+  --bg:#050816;
+  --card:rgba(255,255,255,.05);
+  --text:#eaf2ff;
+  --muted:#94a3b8;
+  --brand:#ff9900;
+  --accent:#38bdf8;
+}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  color:var(--text);
+  background: radial-gradient(circle at 20% 20%, #0ea5e933, transparent),
+              radial-gradient(circle at 80% 80%, #ff990033, transparent),
+              var(--bg);
+}
+
+/* NAV */
+.nav{
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  padding:16px 40px;
+  background:rgba(0,0,0,.4);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.logo{
+  font-weight:bold;
+  letter-spacing:.5px;
+}
+
+.btn{
+  padding:10px 16px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.2);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:var(--accent);
+  color:black;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.hero span{
+  color:var(--brand);
+}
+
+.hero p{
+  color:var(--muted);
+}
+
+/* PIPELINE ANIMATION */
+.pipeline{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:50px;
+}
+
+.stage{
+  padding:16px;
+  border-radius:12px;
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.1);
+  animation:float 4s infinite ease-in-out;
+}
+
+.stage:nth-child(2){animation-delay:1s}
+.stage:nth-child(3){animation-delay:2s}
+.stage:nth-child(4){animation-delay:3s}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* CARDS */
+.section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  padding:20px;
+  border-radius:16px;
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.1);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+  border-color:var(--accent);
+}
+
+/* ARCH BOX */
+.arch{
+  margin-top:40px;
+  padding:20px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#0ea5e922,#ff990022);
+  border:1px solid rgba(255,255,255,.2);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="logo">⚡ CloudOps Engine</div>
+  <div>
+    <button class="btn">Docs</button>
+    <button class="btn">Deploy</button>
+  </div>
+</div>
+
+<section class="hero">
+  <h1>Build Faster on <span>AWS</span></h1>
+  <p>A modern DevOps platform for scalable, secure cloud applications.</p>
+
+  <div class="pipeline">
+    <div class="stage">Code</div>
+    <div class="stage">Build</div>
+    <div class="stage">Deploy</div>
+    <div class="stage">Monitor</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Core Capabilities</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Infrastructure</h3>
+      <p>Provision scalable environments using Terraform & AWS.</p>
+    </div>
+    <div class="card">
+      <h3>CI/CD</h3>
+      <p>Automated pipelines with GitHub Actions & CodePipeline.</p>
+    </div>
+    <div class="card">
+      <h3>Monitoring</h3>
+      <p>CloudWatch, Prometheus & real-time alerts.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Architecture Preview</h2>
+  <div class="arch">
+    <p>
+      Users → CloudFront → ALB → ECS (Microservices) → RDS / DynamoDB  
+      <br><br>
+      Secure, scalable, and production-ready cloud architecture.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 CloudOps Engine • Built on AWS DevOps principles
+</footer>
+
+</body>
+</html>
