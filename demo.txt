@@ -1,0 +1,25 @@
+sudo su - #to switch root user
+
+yum install nginx -y   # Install nginx web server 
+
+systemctl start nginx  #to start nginx web server 
+
+systemctl status nginx  #to check status
+
+cd /usr/share/nginx/html/
+
+index.html #by default html file name is index.html 
+
+vi index.html 
+
+paste the html code we have to press i for insert 
+
+
+:wq!   #write and quit we have to press esc instruction before 
+
+access with public IP
+
+Note: by default webservers are running on 80 port 
+
+after whitelist port number inside sg we can access with public IP
+
